@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Metodos\Metodos.csproj">
+      <Project>{7901d4d6-8ee2-4e00-9565-0d52403ce97a}</Project>
+      <Name>Metodos</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
