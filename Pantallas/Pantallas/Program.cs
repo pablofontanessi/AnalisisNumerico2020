@@ -16,7 +16,7 @@ namespace Pantallas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PantallaPrincipal());
+            Application.Run(new Pantalla.frmPantallaPrincipal());
         }
     }
 }

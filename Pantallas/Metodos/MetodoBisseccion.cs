@@ -4,52 +4,59 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Metodos
 {
+    
     public class MetodoBisseccion
     {
         private double funcion(double x) // FUNCION PARA RAICES
         {
             return -(3 * x) + (2 * (Math.Pow(x, 3)));
         }
-        public void biseccion(double ptoSup, double ptoInf, double errprp, int iterprp)
+        public List<double> biseccion(double Lder, double LIzq, double errprp, int iterprp)
         {
-            double raiz;
-            decimal errcalc;
-            double itercalc;
-            double raizant;
-            if (funcion(ptoSup) != 0)
+            List<double> ListaResultado = new List<double>();
+            ListaResultado = null;
+            double raiz =0;
+            double errcalc=0;
+            double itercalc=0;
+            double raizant=0;
+            if (funcion(Lder) != 0)
             {
-                if (funcion(ptoInf) != 0)
+                if (funcion(Lder) != 0)
                 {
-                    if ((funcion(ptoSup) * funcion(ptoInf)) < 0)
+                    if ((funcion(Lder) * funcion(LIzq)) < 0)
                     {
-                        raiz = (ptoSup + ptoInf) / 2;
+                        raiz = (Lder + LIzq) / 2;
                         errcalc = 100;
                         itercalc = 0;
                         while (((funcion(raiz) != 0) & (iterprp >= itercalc) & (errprp < errcalc)))
                         {
                             itercalc = itercalc + 1;
                             raizant = raiz;
-                            if ((funcion(ptoInf) * funcion(raiz)) > 0)
-                                ptoInf = raiz;
+                            if ((funcion(LIzq) * funcion(raiz)) > 0)
+                                LIzq = raiz;
                             else
-                                ptoSup = raiz;
-                            raiz = (ptoSup + ptoInf) / 2;
+                                Lder = raiz;
+                            raiz = (Lder + LIzq) / 2;
                             errcalc = Math.Abs((raiz - raizant) / raiz);
                         }
-                        frmRaices.txtRaizResultado.Text = raiz;
-                        frmRaices.txtIteracionesResultado.Text = itercalc;
-                        frmRaices.txtErrorResultado.Text = errcalc;
+                        ListaResultado.Add(raiz);
+                        ListaResultado.Add(errcalc);
+                        ListaResultado.Add(itercalc);
+                        return ListaResultado;
+                        
                     }
-                    else
-                        Interaction.MsgBox("Es posible que no haya una raiz en el intervalo seleccionado.");
+                   // else
+                     //   Interaction.MsgBox("Es posible que no haya una raiz en el intervalo seleccionado.");
                 }
-                else
-                    Interaction.MsgBox("Raiz en punto inferior: " + ptoInf);
+                //else
+                  //  Interaction.MsgBox("Raiz en punto inferior: " + LIzq);
             }
-            else
-                Interaction.MsgBox("Raiz en punto superior: " + ptoSup);
+            //else
+            //  Interaction.MsgBox("Raiz en punto superior: " + Lder);
+            return ListaResultado;
         }
 
 
