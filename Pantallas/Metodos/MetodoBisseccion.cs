@@ -17,7 +17,7 @@ namespace Metodos
         public List<double> biseccion(double Lder, double LIzq, double errprp, int iterprp)
         {
             List<double> ListaResultado = new List<double>();
-            ListaResultado = null;
+            
             double raiz =0;
             double errcalc=0;
             double itercalc=0;
@@ -49,13 +49,13 @@ namespace Metodos
                         
                     }
                    // else
-                     //   Interaction.MsgBox("Es posible que no haya una raiz en el intervalo seleccionado.");
+                     //   "Es posible que no haya una raiz en el intervalo seleccionado.");
                 }
                 //else
-                  //  Interaction.MsgBox("Raiz en punto inferior: " + LIzq);
+                  //  ("Raiz en punto inferior: " + LIzq);
             }
             //else
-            //  Interaction.MsgBox("Raiz en punto superior: " + Lder);
+            //  ("Raiz en punto superior: " + Lder);
             return ListaResultado;
         }
 
