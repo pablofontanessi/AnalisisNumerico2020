@@ -32,6 +32,7 @@
             this.Unidad1 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblError = new System.Windows.Forms.Label();
             this.ObtenerBisseccion = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblSol = new System.Windows.Forms.Label();
@@ -41,34 +42,37 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lblErorRe = new System.Windows.Forms.Label();
             this.ObtenerReglaFalsa = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblSolR = new System.Windows.Forms.Label();
+            this.lblErR = new System.Windows.Forms.Label();
+            this.lblIterR = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblErorNR = new System.Windows.Forms.Label();
             this.ObtenerNewtonRapshon = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.lblSolNR = new System.Windows.Forms.Label();
+            this.lblErNR = new System.Windows.Forms.Label();
+            this.lblIterNR = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.ObtenerSecante = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
+            this.lblSolS = new System.Windows.Forms.Label();
+            this.lblErS = new System.Windows.Forms.Label();
+            this.lblIterS = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtLder = new System.Windows.Forms.TextBox();
             this.txtLizq = new System.Windows.Forms.TextBox();
             this.txtIteraciones = new System.Windows.Forms.TextBox();
@@ -80,7 +84,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Unidad2 = new System.Windows.Forms.TabPage();
-            this.lblError = new System.Windows.Forms.Label();
+            this.lblErorS = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Unidad1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -127,7 +131,7 @@
             this.tabControl2.Location = new System.Drawing.Point(38, 223);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(557, 162);
+            this.tabControl2.Size = new System.Drawing.Size(704, 162);
             this.tabControl2.TabIndex = 3;
             // 
             // tabPage1
@@ -138,10 +142,18 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(549, 136);
+            this.tabPage1.Size = new System.Drawing.Size(696, 136);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Biseccion";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Location = new System.Drawing.Point(340, 93);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 13);
+            this.lblError.TabIndex = 2;
             // 
             // ObtenerBisseccion
             // 
@@ -224,15 +236,24 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.lblErorRe);
             this.tabPage2.Controls.Add(this.ObtenerReglaFalsa);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(549, 136);
+            this.tabPage2.Size = new System.Drawing.Size(696, 136);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Regla Falsa";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // lblErorRe
+            // 
+            this.lblErorRe.AutoSize = true;
+            this.lblErorRe.Location = new System.Drawing.Point(381, 93);
+            this.lblErorRe.Name = "lblErorRe";
+            this.lblErorRe.Size = new System.Drawing.Size(0, 13);
+            this.lblErorRe.TabIndex = 7;
             // 
             // ObtenerReglaFalsa
             // 
@@ -242,12 +263,13 @@
             this.ObtenerReglaFalsa.TabIndex = 10;
             this.ObtenerReglaFalsa.Text = "Obtener";
             this.ObtenerReglaFalsa.UseVisualStyleBackColor = true;
+            this.ObtenerReglaFalsa.Click += new System.EventHandler(this.ObtenerReglaFalsa_Click);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.lblSolR);
+            this.groupBox3.Controls.Add(this.lblErR);
+            this.groupBox3.Controls.Add(this.lblIterR);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.label18);
@@ -258,32 +280,32 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos Salida";
             // 
-            // label13
+            // lblSolR
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(93, 87);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(16, 13);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "...";
+            this.lblSolR.AutoSize = true;
+            this.lblSolR.Location = new System.Drawing.Point(93, 87);
+            this.lblSolR.Name = "lblSolR";
+            this.lblSolR.Size = new System.Drawing.Size(16, 13);
+            this.lblSolR.TabIndex = 6;
+            this.lblSolR.Text = "...";
             // 
-            // label14
+            // lblErR
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(93, 51);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(16, 13);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "...";
+            this.lblErR.AutoSize = true;
+            this.lblErR.Location = new System.Drawing.Point(93, 51);
+            this.lblErR.Name = "lblErR";
+            this.lblErR.Size = new System.Drawing.Size(16, 13);
+            this.lblErR.TabIndex = 5;
+            this.lblErR.Text = "...";
             // 
-            // label15
+            // lblIterR
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(93, 15);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(16, 13);
-            this.label15.TabIndex = 4;
-            this.label15.Text = "...";
+            this.lblIterR.AutoSize = true;
+            this.lblIterR.Location = new System.Drawing.Point(93, 15);
+            this.lblIterR.Name = "lblIterR";
+            this.lblIterR.Size = new System.Drawing.Size(16, 13);
+            this.lblIterR.TabIndex = 4;
+            this.lblIterR.Text = "...";
             // 
             // label16
             // 
@@ -314,15 +336,24 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.lblErorNR);
             this.tabPage3.Controls.Add(this.ObtenerNewtonRapshon);
             this.tabPage3.Controls.Add(this.groupBox4);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(549, 136);
+            this.tabPage3.Size = new System.Drawing.Size(696, 136);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = " Newton Rapshon";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // lblErorNR
+            // 
+            this.lblErorNR.AutoSize = true;
+            this.lblErorNR.Location = new System.Drawing.Point(381, 93);
+            this.lblErorNR.Name = "lblErorNR";
+            this.lblErorNR.Size = new System.Drawing.Size(0, 13);
+            this.lblErorNR.TabIndex = 7;
             // 
             // ObtenerNewtonRapshon
             // 
@@ -332,12 +363,13 @@
             this.ObtenerNewtonRapshon.TabIndex = 2;
             this.ObtenerNewtonRapshon.Text = "Obtener";
             this.ObtenerNewtonRapshon.UseVisualStyleBackColor = true;
+            this.ObtenerNewtonRapshon.Click += new System.EventHandler(this.ObtenerNewtonRapshon_Click);
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.label19);
-            this.groupBox4.Controls.Add(this.label20);
-            this.groupBox4.Controls.Add(this.label21);
+            this.groupBox4.Controls.Add(this.lblSolNR);
+            this.groupBox4.Controls.Add(this.lblErNR);
+            this.groupBox4.Controls.Add(this.lblIterNR);
             this.groupBox4.Controls.Add(this.label22);
             this.groupBox4.Controls.Add(this.label23);
             this.groupBox4.Controls.Add(this.label24);
@@ -348,32 +380,32 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Datos Salida";
             // 
-            // label19
+            // lblSolNR
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(93, 87);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(16, 13);
-            this.label19.TabIndex = 6;
-            this.label19.Text = "...";
+            this.lblSolNR.AutoSize = true;
+            this.lblSolNR.Location = new System.Drawing.Point(93, 87);
+            this.lblSolNR.Name = "lblSolNR";
+            this.lblSolNR.Size = new System.Drawing.Size(16, 13);
+            this.lblSolNR.TabIndex = 6;
+            this.lblSolNR.Text = "...";
             // 
-            // label20
+            // lblErNR
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(93, 51);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(16, 13);
-            this.label20.TabIndex = 5;
-            this.label20.Text = "...";
+            this.lblErNR.AutoSize = true;
+            this.lblErNR.Location = new System.Drawing.Point(93, 51);
+            this.lblErNR.Name = "lblErNR";
+            this.lblErNR.Size = new System.Drawing.Size(16, 13);
+            this.lblErNR.TabIndex = 5;
+            this.lblErNR.Text = "...";
             // 
-            // label21
+            // lblIterNR
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(93, 15);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(16, 13);
-            this.label21.TabIndex = 4;
-            this.label21.Text = "...";
+            this.lblIterNR.AutoSize = true;
+            this.lblIterNR.Location = new System.Drawing.Point(93, 15);
+            this.lblIterNR.Name = "lblIterNR";
+            this.lblIterNR.Size = new System.Drawing.Size(16, 13);
+            this.lblIterNR.TabIndex = 4;
+            this.lblIterNR.Text = "...";
             // 
             // label22
             // 
@@ -404,12 +436,13 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.lblErorS);
             this.tabPage4.Controls.Add(this.ObtenerSecante);
             this.tabPage4.Controls.Add(this.groupBox5);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(549, 136);
+            this.tabPage4.Size = new System.Drawing.Size(696, 136);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Secante";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -422,12 +455,13 @@
             this.ObtenerSecante.TabIndex = 2;
             this.ObtenerSecante.Text = "Obtener";
             this.ObtenerSecante.UseVisualStyleBackColor = true;
+            this.ObtenerSecante.Click += new System.EventHandler(this.ObtenerSecante_Click);
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.label25);
-            this.groupBox5.Controls.Add(this.label26);
-            this.groupBox5.Controls.Add(this.label27);
+            this.groupBox5.Controls.Add(this.lblSolS);
+            this.groupBox5.Controls.Add(this.lblErS);
+            this.groupBox5.Controls.Add(this.lblIterS);
             this.groupBox5.Controls.Add(this.label28);
             this.groupBox5.Controls.Add(this.label29);
             this.groupBox5.Controls.Add(this.label30);
@@ -438,32 +472,32 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Datos Salida";
             // 
-            // label25
+            // lblSolS
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(93, 87);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(16, 13);
-            this.label25.TabIndex = 6;
-            this.label25.Text = "...";
+            this.lblSolS.AutoSize = true;
+            this.lblSolS.Location = new System.Drawing.Point(93, 87);
+            this.lblSolS.Name = "lblSolS";
+            this.lblSolS.Size = new System.Drawing.Size(16, 13);
+            this.lblSolS.TabIndex = 6;
+            this.lblSolS.Text = "...";
             // 
-            // label26
+            // lblErS
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(93, 51);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(16, 13);
-            this.label26.TabIndex = 5;
-            this.label26.Text = "...";
+            this.lblErS.AutoSize = true;
+            this.lblErS.Location = new System.Drawing.Point(93, 51);
+            this.lblErS.Name = "lblErS";
+            this.lblErS.Size = new System.Drawing.Size(16, 13);
+            this.lblErS.TabIndex = 5;
+            this.lblErS.Text = "...";
             // 
-            // label27
+            // lblIterS
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(93, 15);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(16, 13);
-            this.label27.TabIndex = 4;
-            this.label27.Text = "...";
+            this.lblIterS.AutoSize = true;
+            this.lblIterS.Location = new System.Drawing.Point(93, 15);
+            this.lblIterS.Name = "lblIterS";
+            this.lblIterS.Size = new System.Drawing.Size(16, 13);
+            this.lblIterS.TabIndex = 4;
+            this.lblIterS.Text = "...";
             // 
             // label28
             // 
@@ -504,6 +538,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtLder);
             this.groupBox1.Controls.Add(this.txtLizq);
             this.groupBox1.Controls.Add(this.txtIteraciones);
@@ -520,6 +555,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Entrada";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(340, 118);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(317, 13);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Nota: Usar L.Izq para el metodo de Newton Rapshon como punto";
             // 
             // txtLder
             // 
@@ -611,13 +655,13 @@
             this.Unidad2.Text = "Unidad2";
             this.Unidad2.UseVisualStyleBackColor = true;
             // 
-            // lblError
+            // lblErorS
             // 
-            this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(340, 93);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 13);
-            this.lblError.TabIndex = 2;
+            this.lblErorS.AutoSize = true;
+            this.lblErorS.Location = new System.Drawing.Point(381, 93);
+            this.lblErorS.Name = "lblErorS";
+            this.lblErorS.Size = new System.Drawing.Size(0, 13);
+            this.lblErorS.TabIndex = 7;
             // 
             // frmPantallaPrincipal
             // 
@@ -636,12 +680,15 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -680,31 +727,35 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button ObtenerReglaFalsa;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblSolR;
+        private System.Windows.Forms.Label lblErR;
+        private System.Windows.Forms.Label lblIterR;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button ObtenerNewtonRapshon;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lblSolNR;
+        private System.Windows.Forms.Label lblErNR;
+        private System.Windows.Forms.Label lblIterNR;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button ObtenerSecante;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label lblSolS;
+        private System.Windows.Forms.Label lblErS;
+        private System.Windows.Forms.Label lblIterS;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblErorRe;
+        private System.Windows.Forms.Label lblErorNR;
+        private System.Windows.Forms.Label lblErorS;
     }
 }
 
