@@ -12,19 +12,23 @@ namespace Metodos
     {
         private double funcion(double x) // FUNCION PARA RAICES
         {
-            return -(3 * x) + (2 * (Math.Pow(x, 3)));
-        }
-        public List<double> biseccion(double Lder, double LIzq, double errprp, int iterprp)
-        {
-            List<double> ListaResultado = new List<double>();
+            return 0.5*x - 1 ; 
             
-            double raiz =0;
-            double errcalc=0;
-            double itercalc=0;
-            double raizant=0;
+            //y=1/2 x -1 -- valores para usar lizq = 1/2/3, lder = 5/2/5 respectivamente --tole 0.0001, inter 100
+
+            //-(3 * x) + (2 * (Math.Pow(x, 3))) funcion probada antes
+        }
+        public List<string> biseccion(double Lder, double LIzq, double errprp, int iterprp)
+        {
+            List<string> ListaResultado = new List<string>();
+            
+            double raiz;
+            double errcalc;
+            double itercalc;
+            double raizant;
             if (funcion(Lder) != 0)
             {
-                if (funcion(Lder) != 0)
+                if (funcion(LIzq) != 0)
                 {
                     if ((funcion(Lder) * funcion(LIzq)) < 0)
                     {
@@ -42,21 +46,38 @@ namespace Metodos
                             raiz = (Lder + LIzq) / 2;
                             errcalc = Math.Abs((raiz - raizant) / raiz);
                         }
-                        ListaResultado.Add(raiz);
-                        ListaResultado.Add(errcalc);
-                        ListaResultado.Add(itercalc);
-                        return ListaResultado;
                         
+                        ListaResultado.Add(raiz.ToString());
+                        ListaResultado.Add(errcalc.ToString());
+                        ListaResultado.Add(itercalc.ToString());
+                        return ListaResultado;
+
                     }
-                   // else
-                     //   "Es posible que no haya una raiz en el intervalo seleccionado.");
+                    else
+                    {
+                        string Fallo = "A";
+                        ListaResultado.Add(Fallo);
+                        return ListaResultado; //Es posible que no haya una raiz en el intervalo seleccionado.
+                    }
+
                 }
-                //else
-                  //  ("Raiz en punto inferior: " + LIzq);
+                else
+                {
+                    string Fallo = "B";
+                    ListaResultado.Add(Fallo);
+                    ListaResultado.Add(LIzq.ToString());
+                    return ListaResultado; //Raiz en lado izq
+                }
+
             }
-            //else
-            //  ("Raiz en punto superior: " + Lder);
-            return ListaResultado;
+            else
+            {
+                string Fallo = "C";
+                ListaResultado.Add(Fallo);
+                ListaResultado.Add(Lder.ToString());
+                return ListaResultado; //Raiz en lado der
+            }       
+            
         }
 
 
