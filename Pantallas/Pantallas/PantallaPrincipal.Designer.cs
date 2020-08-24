@@ -119,7 +119,7 @@
             this.Unidad1.Padding = new System.Windows.Forms.Padding(3);
             this.Unidad1.Size = new System.Drawing.Size(748, 400);
             this.Unidad1.TabIndex = 0;
-            this.Unidad1.Text = "Unidad1";
+            this.Unidad1.Text = "Unidad 1";
             this.Unidad1.UseVisualStyleBackColor = true;
             // 
             // tabControl2
@@ -652,7 +652,7 @@
             this.Unidad2.Padding = new System.Windows.Forms.Padding(3);
             this.Unidad2.Size = new System.Drawing.Size(748, 400);
             this.Unidad2.TabIndex = 1;
-            this.Unidad2.Text = "Unidad2";
+            this.Unidad2.Text = "Unidad 2";
             this.Unidad2.UseVisualStyleBackColor = true;
             // 
             // lblErorS
