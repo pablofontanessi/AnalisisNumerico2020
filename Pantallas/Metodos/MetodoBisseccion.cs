@@ -12,8 +12,8 @@ namespace Metodos
     {
         private double funcion(double x) // FUNCION PARA RAICES
         {
-            return 0.5*x - 1 ; 
-            
+            return (Math.Pow(x, 2) - 3) * (Math.Pow(Math.E, x - 2));
+
             //y=1/2 x -1 -- valores para usar lizq = 1/2/3, lder = 5/2/5 respectivamente --tole 0.0001, inter 100
 
             //-(3 * x) + (2 * (Math.Pow(x, 3))) funcion probada antes
@@ -46,9 +46,9 @@ namespace Metodos
                             raiz = (Lder + LIzq) / 2;
                             errcalc = Math.Abs((raiz - raizant) / raiz);
                         }
-                        
+                        var errorDecimal = Convert.ToDecimal(errcalc);
                         ListaResultado.Add(raiz.ToString());
-                        ListaResultado.Add(errcalc.ToString());
+                        ListaResultado.Add(errorDecimal.ToString());
                         ListaResultado.Add(itercalc.ToString());
                         return ListaResultado;
 

@@ -10,7 +10,7 @@ namespace Metodos
     {
         private double funcion(double x) // FUNCION PARA RAICES
         {
-            return 0.5 * x - 1;
+            return (Math.Pow(x, 2) - 3) * (Math.Pow(Math.E, x - 2)); //(Math.Pow(x, 2) - 3) * (Math.Pow(Math.E, x - 2));
 
             //y=1/2 x -1 -- valores para usar lizq = 1/2/3, lder = 5/2/5 respectivamente --tole 0.0001, inter 100
 
@@ -61,7 +61,7 @@ namespace Metodos
                     string Fallo = "B";
                     ListaResultado.Add(Fallo);
                     ListaResultado.Add(LIzq.ToString());
-                    return ListaResultado; //Raiz en lado izq
+                    return ListaResultado; //Raiz en lado izquierdo
                 }
             }
             else
@@ -69,7 +69,7 @@ namespace Metodos
                 string Fallo = "C";
                 ListaResultado.Add(Fallo);
                 ListaResultado.Add(LDer.ToString());
-                return ListaResultado; //Raiz en lado der
+                return ListaResultado; //Raiz en lado derecho
             }
               
         }
