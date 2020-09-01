@@ -41,8 +41,9 @@ namespace Metodos
                     {
                         if ((errprp < errcalc) | (funcion(raiz) != 0))
                         {
+                            var errorDecimal = Convert.ToDecimal(errcalc);
                             ListaResultado.Add(raiz.ToString());
-                            ListaResultado.Add(errcalc.ToString());
+                            ListaResultado.Add(errorDecimal.ToString());
                             ListaResultado.Add(itercalc.ToString());
                             return ListaResultado;
                             //aca encontro raiz
@@ -57,8 +58,9 @@ namespace Metodos
                     }
                     else
                     {
+                        var errorDecimal = Convert.ToDecimal(errcalc);
                         ListaResultado.Add(raiz.ToString());
-                        ListaResultado.Add(errcalc.ToString());
+                        ListaResultado.Add(errorDecimal.ToString());
                         ListaResultado.Add(itercalc.ToString());
                         return ListaResultado;
                         //encontro raiz

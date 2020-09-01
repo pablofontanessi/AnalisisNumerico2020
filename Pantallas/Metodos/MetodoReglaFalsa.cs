@@ -43,8 +43,9 @@ namespace Metodos
                             raiz = (funcion(LDer) * LIzq - funcion(LIzq) * LDer) / (double)(funcion(LDer) - funcion(LIzq));
                             errcalc = Math.Abs((raiz - raizant) / raiz);
                         }
+                        var errorDecimal = Convert.ToDecimal(errcalc);
                         ListaResultado.Add(raiz.ToString());
-                        ListaResultado.Add(errcalc.ToString());
+                        ListaResultado.Add(errorDecimal.ToString());
                         ListaResultado.Add(itercalc.ToString());
                         return ListaResultado;
                     }
