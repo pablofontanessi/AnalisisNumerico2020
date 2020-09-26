@@ -62,6 +62,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.lblErorS = new System.Windows.Forms.Label();
             this.ObtenerSecante = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lblSolS = new System.Windows.Forms.Label();
@@ -84,7 +85,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Unidad2 = new System.Windows.Forms.TabPage();
-            this.lblErorS = new System.Windows.Forms.Label();
+            this.btnMatriz = new System.Windows.Forms.Button();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.lblMetodo = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtMatriz = new System.Windows.Forms.TextBox();
+            this.txtGausJordanI = new System.Windows.Forms.TextBox();
+            this.txtErrorGausJordan = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Unidad1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -97,6 +107,7 @@
             this.tabPage4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.Unidad2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -447,6 +458,14 @@
             this.tabPage4.Text = "Secante";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // lblErorS
+            // 
+            this.lblErorS.AutoSize = true;
+            this.lblErorS.Location = new System.Drawing.Point(381, 93);
+            this.lblErorS.Name = "lblErorS";
+            this.lblErorS.Size = new System.Drawing.Size(0, 13);
+            this.lblErorS.TabIndex = 7;
+            // 
             // ObtenerSecante
             // 
             this.ObtenerSecante.Location = new System.Drawing.Point(384, 57);
@@ -647,6 +666,16 @@
             // 
             // Unidad2
             // 
+            this.Unidad2.Controls.Add(this.label13);
+            this.Unidad2.Controls.Add(this.label12);
+            this.Unidad2.Controls.Add(this.txtErrorGausJordan);
+            this.Unidad2.Controls.Add(this.txtGausJordanI);
+            this.Unidad2.Controls.Add(this.txtMatriz);
+            this.Unidad2.Controls.Add(this.label11);
+            this.Unidad2.Controls.Add(this.comboBox1);
+            this.Unidad2.Controls.Add(this.lblMetodo);
+            this.Unidad2.Controls.Add(this.btnCalcular);
+            this.Unidad2.Controls.Add(this.btnMatriz);
             this.Unidad2.Location = new System.Drawing.Point(4, 22);
             this.Unidad2.Name = "Unidad2";
             this.Unidad2.Padding = new System.Windows.Forms.Padding(3);
@@ -655,13 +684,93 @@
             this.Unidad2.Text = "Unidad 2";
             this.Unidad2.UseVisualStyleBackColor = true;
             // 
-            // lblErorS
+            // btnMatriz
             // 
-            this.lblErorS.AutoSize = true;
-            this.lblErorS.Location = new System.Drawing.Point(381, 93);
-            this.lblErorS.Name = "lblErorS";
-            this.lblErorS.Size = new System.Drawing.Size(0, 13);
-            this.lblErorS.TabIndex = 7;
+            this.btnMatriz.Location = new System.Drawing.Point(176, 10);
+            this.btnMatriz.Name = "btnMatriz";
+            this.btnMatriz.Size = new System.Drawing.Size(75, 41);
+            this.btnMatriz.TabIndex = 0;
+            this.btnMatriz.Text = "Generar Matriz";
+            this.btnMatriz.UseVisualStyleBackColor = true;
+            this.btnMatriz.Click += new System.EventHandler(this.btnMatriz_Click);
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.Location = new System.Drawing.Point(487, 24);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcular.TabIndex = 1;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lblMetodo
+            // 
+            this.lblMetodo.AutoSize = true;
+            this.lblMetodo.Location = new System.Drawing.Point(287, 24);
+            this.lblMetodo.Name = "lblMetodo";
+            this.lblMetodo.Size = new System.Drawing.Size(46, 13);
+            this.lblMetodo.TabIndex = 2;
+            this.lblMetodo.Text = "Metodo:";
+            this.lblMetodo.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Gauss-Jordan"});
+            this.comboBox1.Location = new System.Drawing.Point(339, 21);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 3;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(21, 22);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(38, 13);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Matriz:";
+            // 
+            // txtMatriz
+            // 
+            this.txtMatriz.Location = new System.Drawing.Point(65, 19);
+            this.txtMatriz.Name = "txtMatriz";
+            this.txtMatriz.Size = new System.Drawing.Size(100, 20);
+            this.txtMatriz.TabIndex = 5;
+            // 
+            // txtGausJordanI
+            // 
+            this.txtGausJordanI.Location = new System.Drawing.Point(339, 63);
+            this.txtGausJordanI.Name = "txtGausJordanI";
+            this.txtGausJordanI.Size = new System.Drawing.Size(100, 20);
+            this.txtGausJordanI.TabIndex = 6;
+            // 
+            // txtErrorGausJordan
+            // 
+            this.txtErrorGausJordan.Location = new System.Drawing.Point(339, 100);
+            this.txtErrorGausJordan.Name = "txtErrorGausJordan";
+            this.txtErrorGausJordan.Size = new System.Drawing.Size(100, 20);
+            this.txtErrorGausJordan.TabIndex = 7;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(274, 66);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 13);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Iteraciones";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(262, 107);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(71, 13);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Error Relativo";
             // 
             // frmPantallaPrincipal
             // 
@@ -693,6 +802,8 @@
             this.groupBox5.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.Unidad2.ResumeLayout(false);
+            this.Unidad2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -756,6 +867,16 @@
         private System.Windows.Forms.Label lblErorRe;
         private System.Windows.Forms.Label lblErorNR;
         private System.Windows.Forms.Label lblErorS;
+        private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.Button btnMatriz;
+        private System.Windows.Forms.Label lblMetodo;
+        private System.Windows.Forms.TextBox txtMatriz;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtErrorGausJordan;
+        private System.Windows.Forms.TextBox txtGausJordanI;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
     }
 }
 

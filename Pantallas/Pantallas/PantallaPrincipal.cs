@@ -184,5 +184,62 @@ namespace Pantalla
 
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMatriz_Click(object sender, EventArgs e)
+        {
+           
+            TextBox oText;
+            Label lbl;
+            int posl = 30;
+            int post = 150;
+            for (int i = 1, loopTo = int.Parse(txtMatriz.Text); i <= loopTo; i++)
+            {
+                for (int j = 1, loopTo1 = int.Parse(txtMatriz.Text); j <= loopTo1; j++)
+                {
+                    oText = new TextBox();
+                    oText.Left = posl;
+                    oText.Top = post;
+                    oText.Width = 55;
+                    oText.Name = i + "," + j;
+                    oText.Visible = true;
+                    this.Controls.Add(oText);
+                    posl = posl + 10 + oText.Width;
+                    oText = default;
+                }
+
+                lbl = new Label();
+                lbl.Text = " = ";
+                lbl.Left = posl - 5;
+                lbl.Top = post;
+                lbl.Width = 20;
+                lbl.Visible = true;
+                this.Controls.Add(lbl);
+                oText = new TextBox();
+                oText.Left = posl + lbl.Width;
+                oText.Top = post;
+                oText.Width = 55;
+                oText.Name ="ind" + i;
+                oText.Visible = true;
+                this.Controls.Add(oText);
+                post = post + 25;
+                posl = 30;
+            }
+
+            btnMatriz.Enabled = false;
+            txtMatriz.Enabled = false;
+            btnCalcular.Enabled = true;
+            txtGausJordanI.Enabled = true;
+            txtErrorGausJordan.Enabled = true;
+        }
     }
 }

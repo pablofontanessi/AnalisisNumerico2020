@@ -70,7 +70,7 @@ namespace Metodos
             }
             for (var i = 1; i <= cant; i++) 
             { 
-                frmEcuaciones.txtRespuesta.Text = frmEcuaciones.txtRespuesta.Text + "X" + i.ToString() + " = " + vector[i].ToString() + Constants.vbCrLf;
+               // frmEcuaciones.txtRespuesta.Text = frmEcuaciones.txtRespuesta.Text + "X" + i.ToString() + " = " + vector[i].ToString() + Constants.vbCrLf;
             }
         }
     }
